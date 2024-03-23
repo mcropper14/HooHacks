@@ -25,8 +25,6 @@ class Twamp:
         self.rec = 0
         self.days = 0 
 
-        #self.load_from_csv()
-
     def set_name(self):
         name = input("Enter a name for your TWAMP: ")
         self.name = name.capitalize()
@@ -39,8 +37,6 @@ class Twamp:
                 / \\
                    
                     """)
-        
-       
 
     def major(self):
         print('Majors Include: STEM or Not STEM ')
