@@ -77,9 +77,20 @@ with torch.no_grad():
 #do something maybe with input
 is_stem = 1  
 
+#happiness,twampness,d_dollars,clubs,health,hygiene,name,caffinate,sleep,stres,hours,study,clases,maj,rec,days
 
 maj_values = data['maj']
 maj = maj_values[0]
+
+caf_values = data['caffinate']
+caf = caf_values[0]
+
+health_values = data['health']
+health = health_values[0]
+
+sleep_values = data['sleep']
+sleep = sleep_values[0]
+
 
 
 
@@ -93,23 +104,37 @@ def predict():
 
 def major(major):
     if maj == "stem":
-        print("stem")
+        return True
+        
         #display coffee
     else:
-        print("test")
+        return False
         #don't display coffee 
 
+#Given a major predict different major "attributes"
+#display a character that represents the given major 
 
 
 def main():
     predict()
+    #major(maj)
     #print("running")
     #display(sprites.boy_1)
 
-    if predict_attribute.gender_val == 1:
-        display(sprites.girl_1)
+    if major(maj):
+
+        
+        if predict_attribute.gender_val == 1:
+            display(sprites.girl_1, sprites.tom)
+        else:
+            display(sprites.boy_2, sprites.tom)
     else:
-        display(sprites.boy_2)
+
+        if predict_attribute.gender_val == 1:
+            display(sprites.girl_1)
+        else:
+            display(sprites.boy_2)
+            #display(sprites.tom)
 
 if __name__ == "__main__":
     main()

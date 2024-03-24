@@ -37,7 +37,7 @@ predicted_genders = clf.predict(X)
 predicted_genders = le.inverse_transform(predicted_genders)
 
 for name, predicted_gender in zip(data['name'], predicted_genders):
-    print(f"Name: {name}, Predicted Gender: {predicted_gender}")
+    pass
 
 gender_val = 0 
 
@@ -50,5 +50,4 @@ def get_gender(predicted_gender):
         gender_val = 1
         return gender_val
 
-print(get_gender(predicted_gender))
 
